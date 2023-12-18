@@ -1,7 +1,5 @@
-import 'package:clean_arc/product/init/config/app_configuration.dart';
-import 'package:clean_arc/product/init/config/env_dev.dart';
-import 'package:clean_arc/product/init/config/env_prod.dart';
 import 'package:flutter/foundation.dart';
+import 'package:gen/gen.dart';
 
 /// The code defines a class called `AppEnvironment` that is responsible for
 /// configuration settings of the application.

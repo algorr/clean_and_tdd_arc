@@ -1,5 +1,5 @@
-import 'package:clean_arc/product/init/config/app_configuration.dart';
 import 'package:envied/envied.dart';
+import 'package:gen/src/environment/app_configuration.dart';
 
 part 'env_dev.g.dart';
 

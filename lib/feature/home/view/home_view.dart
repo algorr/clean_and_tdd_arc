@@ -3,7 +3,11 @@ import 'package:clean_arc/product/init/product_localization.dart';
 import 'package:clean_arc/product/utility/constants/enums/product_locales.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:gen/gen.dart';
 
+/// The `HomeView` class represents a view in a Dart application that displays
+/// a title, a lottie
+/// animation, and a button to change the language.
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
@@ -17,6 +21,9 @@ class HomeView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Assets.lotties.lottieCode.lottie(
+              package: 'gen',
+            ),
             const Text(LocaleKeys.home_columnTitle).tr(),
             ElevatedButton(
               onPressed: () {

@@ -10,25 +10,25 @@ part of 'env_prod.dart';
 // ignore_for_file: type=lint
 final class _ProdEnv {
   static const List<int> _enviedkey_baseUrl = <int>[
-    1866849314,
-    2885912049,
-    2993609346,
-    2543038150,
-    4139460302,
-    2922285855,
-    1775302499,
-    324941968,
+    190026040,
+    1686349551,
+    3111215899,
+    1011707343,
+    124176469,
+    4054857251,
+    938532368,
+    3895926800,
   ];
 
   static const List<int> _envieddata_baseUrl = <int>[
-    1866849367,
-    2885911964,
-    2993609451,
-    2543038130,
-    4139460286,
-    2922285933,
-    1775302412,
-    324942068,
+    190026061,
+    1686349442,
+    3111215986,
+    1011707323,
+    124176421,
+    4054857297,
+    938532479,
+    3895926900,
   ];
 
   static final String _baseUrl = String.fromCharCodes(List<int>.generate(
@@ -38,23 +38,23 @@ final class _ProdEnv {
   ).map((int i) => _envieddata_baseUrl[i] ^ _enviedkey_baseUrl[i]));
 
   static const List<int> _enviedkey_apiKey = <int>[
-    2092507699,
-    3841383892,
-    1644176487,
-    2139294535,
-    3364348454,
-    1907738552,
-    2580409641,
+    1561050233,
+    3193899045,
+    2430707594,
+    3703698478,
+    3364377307,
+    3946643717,
+    2376372966,
   ];
 
   static const List<int> _envieddata_apiKey = <int>[
-    2092507715,
-    3841383846,
-    1644176392,
-    2139294499,
-    3364348439,
-    1907738506,
-    2580409626,
+    1561050121,
+    3193899095,
+    2430707685,
+    3703698506,
+    3364377322,
+    3946643767,
+    2376372949,
   ];
 
   static final String _apiKey = String.fromCharCodes(List<int>.generate(
