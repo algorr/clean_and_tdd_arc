@@ -1,16 +1,16 @@
 import 'package:clean_arc/feature/home/view/home_view.dart';
+import 'package:clean_arc/product/init/main_app_initialize.dart';
 import 'package:clean_arc/product/init/product_localization.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await EasyLocalization.ensureInitialized();
-  runApp(ProductLocalization(child: const MyApp()));
+  await MainAppInitialize().setup();
+  runApp(ProductLocalization(child: const _MyApp()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class _MyApp extends StatelessWidget {
+  const _MyApp();
 
   // This widget is the root of your application.
   @override
