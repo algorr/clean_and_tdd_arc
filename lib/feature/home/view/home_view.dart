@@ -1,6 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:clean_arc/product/init/language/locale_keys.g.dart';
-import 'package:clean_arc/product/init/product_localization.dart';
-import 'package:clean_arc/product/utility/constants/enums/product_locales.dart';
+import 'package:clean_arc/product/navigation/app_router.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:gen/gen.dart';
@@ -8,6 +8,7 @@ import 'package:gen/gen.dart';
 /// The `HomeView` class represents a view in a Dart application that displays
 /// a title, a lottie
 /// animation, and a button to change the language.
+@RoutePage()
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
@@ -27,10 +28,7 @@ class HomeView extends StatelessWidget {
             const Text(LocaleKeys.home_columnTitle).tr(),
             ElevatedButton(
               onPressed: () {
-                ProductLocalization.updateLanguage(
-                  context: context,
-                  value: ProductLocales.tr,
-                );
+                context.router.push(HomeDetailRoute(id: '1'));
               },
               child: const Text(LocaleKeys.home_columnTitle).tr(),
             ),

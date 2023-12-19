@@ -1,7 +1,7 @@
-import 'package:clean_arc/feature/home/view/home_view.dart';
 import 'package:clean_arc/product/init/main_app_initialize.dart';
 import 'package:clean_arc/product/init/product_localization.dart';
 import 'package:clean_arc/product/init/theme/app_color_scheme.dart';
+import 'package:clean_arc/product/navigation/app_router.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -12,18 +12,17 @@ Future<void> main() async {
 
 class _MyApp extends StatelessWidget {
   const _MyApp();
-
-  // This widget is the root of your application.
+  static final _appRouter = AppRouter();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: _appRouter.config(),
       title: 'Clean_Arc & Tdd_Arc',
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme),
       darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
-      home: const HomeView(),
     );
   }
 }
