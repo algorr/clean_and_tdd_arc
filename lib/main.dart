@@ -4,6 +4,7 @@ import 'package:clean_arc/product/init/theme/app_color_scheme.dart';
 import 'package:clean_arc/product/navigation/app_router.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:widgets/widgets.dart';
 
 Future<void> main() async {
   await MainAppInitialize().setup();
@@ -18,6 +19,7 @@ class _MyApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: _appRouter.config(),
       title: 'Clean_Arc & Tdd_Arc',
+      builder: CustomResponsive.build,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,

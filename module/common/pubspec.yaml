@@ -1,13 +1,14 @@
 name: common
 description: "A new Flutter package project."
 version: 0.0.1
-homepage:
+homepage: none
 
 environment:
   sdk: '>=3.2.2 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
+  cached_network_image: ^3.3.0
   flutter:
     sdk: flutter
 
